@@ -3,257 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE8]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous"></script>
+  <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Da-ae Choi">
+  <meta name="keywords" content="portfolio,personal portfolio,web portfolio,design portfolio,responsive,responsive web,responsive web port,포트폴리오,개인 포트폴리오,웹포트폴리오,디자인포트폴리오,반응형,반응형 웹,반응형 웹 포트폴리오">
+  <meta name="description" content="신입 웹디자이너/퍼블리셔의 간단명료한 웹포트폴리오">
+  <meta name="copyright" content="Da-ae Choi">
+  <!-- og -->
+  <meta property="og:title" content="portfolio">
+  <meta property="og:url" content="https://duwkrladlf.dothome.co.kr/daae_p">
+  <meta property="og:image" content="./img/ogimage.png">
+  <meta property="og:description" content="신입 웹디자이너/퍼블리셔의 간단명료한 웹포트폴리오">
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="portfolio">
+  <meta name="twitter:url" content="https://duwkrladlf.dothome.co.kr/daae_p">
+  <meta name="twitter:image" content="./img/ogimage.png">
+  <meta name="twitter:description" content="신입 웹디자이너/퍼블리셔의 간단명료한 웹포트폴리오">
+  
   <title>DA:-P</title>
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/index.min.css">
   <script src="./js/jquery.min.js"></script>
   <script src="./js/prefixfree.min.js"></script>
-  <style>
-    /* skip */
-    .skip>a{display:none;position:fixed;left:50%;top:-110%;transform:translate(-50%,0);z-index:10000;;border-radius:28px;padding:2rem;background-color:#f9d142;font-size:2rem;font-weight:700;text-align:center;}
-    .skip>a:focus{top:50%;transform:translate(-50%,-50%);}
-
-    /* default */
-    .container{width:100%;padding:84px 1rem;max-width: 1160px;margin: 0 auto;display:flex;flex-direction:column;align-items:center;}
-    .sec_tit,.sec_tit span{display:inline-block;}
-    .sec_tit{font-size:26px;}
-    .sec_tit span{font-size:24px;font-weight:700;letter-spacing:3px;}
-    .sec_sub_tit{margin:24px 0;}
-    .sec_sub_tit,.sec_sub_tit span{display:inline-block;line-height:26px;}
-    .sec_sub_tit span{font-size:18px;font-weight:700;}
-    .sec_txt{margin-bottom:24px;line-height:22px;}
-
-    /* header */
-    .header{background-color:#f9d142;position:fixed;left:0;top:0;right:0;z-index:9999;}
-    .header .container{padding:12px 1rem;flex-direction:row;justify-content:space-between;}
-    .header .logo a{font-size:27px;font-weight:800;}
-    .nav{width:206px;}
-    .nav ul{display:flex;justify-content:space-between;}
-    .nav a{position:relative;text-align:center;}
-    .nav a::after{position:absolute;content:'';left:0;right:0;height:2px;opacity:0;background-color:#292826;transition:0.2s;}
-    .nav a:hover::after,.nav a.scroll::after{opacity:1;}
-
-    /* home */
-    .home{height:100vh;position:relative;overflow:hidden;background:url(./img/bg_star.gif) center no-repeat #000;background-size:cover;}
-    .home .container{padding:0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
-    .home .selfie{width:48.17073170731707%;max-width:297px;margin:0 auto 1rem;border-radius:50%;overflow:hidden;}
-    .home h2,.home h3,.home h4{text-align:center;color:#f9d142}
-    .home h2,.home h3{font-size:32px;font-weight:700;}
-    .home h4{margin:10px auto;font-size:20px;font-weight:500;}
-    .home h3{font-size:30px;font-weight:500;}
-    
-    /* intro */
-    .intro .container{align-items:flex-start;}
-    .container article:first-child,.profile{margin-bottom:44px;display:flex;flex-direction:column;}
-    .chk_btns{display:flex;justify-content:space-between;}
-    .chk_btns div{width:48.17073170731707%;border-radius:50px;padding:14px 0;background-color:#f9d142;text-align:center;}
-    .chk_btns a{font-size:18px;font-weight:500;}
-
-    .profile{margin-bottom:0;}
-    .profile>li{margin-bottom:20px;}
-    .profile>li:last-child,.skills>li:last-child,.licenses>li:last-child{margin-bottom:0;}
-    .profile p,.profile div{display:inline-block;}
-    .profile .li_tit{border-left:6px solid #f9d142;padding:0 12px 0 6px;font-size:22px;font-weight:700;line-height:26px;}
-    .profile .li_txt{font-size:20px;font-weight:400;}
-    .skills,.licenses{margin:14px 0 0 14px;}
-    .skills>li,.licenses>li{margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;}
-    .skills .skill{width:33.75796178343949%;}
-    .skills .exp{width:10.82802547770701%;}
-    .skills .bar{width:49.84227129337539%;height:8px;border-radius:8px;background-color:#ddd;text-indent:-9999px;overflow:hidden;}
-    .skills .bar span{width:5%;height:100%;transition:4.5s;background-color:#f9d142;}
-    .licenses>li{justify-content:flex-start;align-items:flex-start;}
-    .li_date{margin-right:12px;}
-
-    /* port */
-    .container article.port_content{width:100%;margin-bottom:0;}
-    .port_list{width:100%;}
-    .portfolio{display:flex;flex-direction:column;}
-    .portfolio>li{margin-bottom:1rem;width:100%;position:relative;overflow:hidden;}
-    .portfolio>li:last-child{margin-bottom:0;}
-    .port_hover,.port_info{transition:0.5s;position:absolute;top:100%;bottom:-100%;left:0;right:0;background-color:#f9d142;display:flex;flex-direction:column;}
-    .portfolio .port_img:hover .port_hover,.portfolio>li.active .port_info{top:0;bottom:0;}
-
-    .port_img{position:relative;overflow:hidden;}
-
-    .port_hover{padding:14px;justify-content:flex-end;}
-    .port_hover h4,.port_hover span,.port_hover p,.port_info h4,.port_info span,.port_info p{display:inline-block;}
-    .port_hover h4{font-size:26px;font-weight:800;}
-    .port_hover p{margin:14px 0.2rem 0 0;font-size:14px;}
-
-    .port_info{padding:14px;justify-content:space-between;}
-    .port_info h4{font-size:32px;font-weight:800;}
-    .port_info span{margin-left:8px;font-size:24px;font-weight:700;}
-    .port_info p{margin-right:8px;}
-    .prev_box{height:35%;display:flex;justify-content:space-between;}
-    .portfolio>li:last-child .prev_box{justify-content:flex-start;}
-    .portfolio>li:last-child .prev_box li{margin-right:5%;}
-    .prev_box li{background-repeat:no-repeat;background-size:cover;background-position-x:center;transition:4s 1s;text-indent:-9999px;}
-    .portfolio>li:nth-child(2) .prev_box li,.portfolio>li:nth-child(3) .prev_box li{transition:10s 1s;}
-    .portfolio>li.active .prev_box li{background-position-y:bottom;}
-    .mo_ver{width:21%;}
-    .tab_ver{width:30%;}
-    .pc_ver{width:42%;}
-    .portfolio>li:nth-child(1) .mo_ver{background-image:url(./img/giljo01.png);}
-    .portfolio>li:nth-child(1) .tab_ver{background-image:url(./img/giljo02.png);}
-    .portfolio>li:nth-child(1) .pc_ver{background-image:url(./img/giljo03.png);}
-    .portfolio>li:nth-child(2) .mo_ver{background-image:url(./img/rayark01.png);}
-    .portfolio>li:nth-child(2) .tab_ver{background-image:url(./img/rayark02.png);}
-    .portfolio>li:nth-child(2) .pc_ver{background-image:url(./img/rayark03.png);}
-    .portfolio>li:nth-child(3) .mo_ver{background-image:url(./img/indigo01.png);}
-    .portfolio>li:nth-child(3) .tab_ver{background-image:url(./img/indigo02.png);}
-    .portfolio>li:nth-child(3) .pc_ver{background-image:url(./img/indigo03.png);}
-    .portfolio>li:nth-child(4) .mo_ver{background-image:url(./img/hansol01.png);}
-    .portfolio>li:nth-child(4) .pc_ver{background-image:url(./img/hansol02.png);}
-
-    .port_info .port_tag p{font-size:18px;}
-    .port_info .port_txt li::before{content:'-';display:inline-block;margin-right:4px;line-height:24px;}
-    .port_info .port_txt li{line-height:24px;margin-bottom:8px;}
-    .port_info .port_txt li:last-child{margin-bottom:0;}
-
-    .port_btns{display:flex;justify-content:space-between;}
-    .port_btns>li{width:49%;border-radius:50px;padding:0.6rem 1rem;background-color:#292826;}
-    .port_btns a{text-align:center;color:#f9d142;font-weight:500;}
-
-    /* footer */
-    .footer{background-color:#f9d142;}
-    .footer .container{padding:24px 0;justify-content:center;}
-    .footer p{font-size:12px;font-weight:300;text-align:center;}
-
-    .mo_hide,.port_hover{display:none;}
-
-    @media(min-width:440px){
-      .licenses>li br{display:none;}
-    }
-    @media(min-width:680px){
-      .sec_sub_tit br{display:none;}
-      .portfolio{flex-flow:row wrap;justify-content:space-between;align-content:space-between;}
-      .portfolio>li{width:48.6%}
-      .portfolio>li:last-child{margin-bottom:1rem;}
-    }
-    
-    @media(min-width:768px){
-      .container{padding:96px 20px;}
-      .sec_tit{font-size:32px;}
-      .sec_tit span{font-size:28px;}
-      .sec_sub_tit,.sec_sub_tit span,.sec_txt{font-size:18px;line-height:30px;}
-      .sec_sub_tit span{font-size:20px;}
-      .sec_txt{margin-bottom:30px;}
-
-      .header .container{padding:14px 20px;}
-      .header .logo a{font-size:28px;}
-      .nav{width:356px;}
-      .nav a{font-size:20px;}
-      .nav a::after{height:3px;}
-
-      .home .selfie{width:23.35164835164835%;margin-bottom:26px;}
-      .home h2{font-size:38px;}
-      .home h3{font-size:34px;}
-      .home h4{margin:20px auto;font-size:24px;}
-
-      .intro .container{flex-direction:row;justify-content:space-between;align-items:center;}
-      .intro .container>article{width:48%;}
-      .profile>li{margin-bottom:26px;}
-
-      .profile .li_tit{padding-right:14px;font-size:24px;line-height:28px;}
-      .profile .li_txt{font-size:22px;}
-      .skills>li,.licenses>li{margin-bottom:10px;}
-      .skills p,.licenses p{font-size:18px;}
-
-      .container article.port_content{margin-bottom:10px;}
-      .port_info{padding:18px;}
-      .port_info h4{font-size:36px;}
-      .port_info span{font-size:26px;}
-      .port_info .port_txt li{font-size:18px;margin-bottom:6px;}
-      .port_btns a{font-size:18px;}
-
-
-      .footer .container{padding:24px 0;}
-      .footer p{font-size:14px;}
-    }
-
-    @media(min-width:1200px){
-      .section{width:calc(100% - 280px);margin-left:auto;}
-      .sec_tit{font-size:42px;}
-      .sec_tit span{font-size:38px;}
-      .sec_sub_tit,.sec_sub_tit span,.sec_txt{margin:0;}
-      .sec_sub_tit{width:59%;margin-bottom:3rem;font-size:26px;}
-      .sec_sub_tit span{font-size:28px;}
-      .sec_txt{width:48%;font-size:20px;line-height:28px;}
-      .mo_hide{display:block;}
-      .pc_hide{display:none;}
-      .container{padding:70px 40px;}
-      .header,.footer{width:280px;bottom:0;}
-      .header{height:100vh;right:auto;}
-      .header .container{height:inherit;padding:38px 52px 100px;flex-direction:column;justify-content:space-between;}
-      .header .logo a{font-size:56px;}
-
-      .nav{width:auto;}
-      .nav ul{flex-direction:column;align-items:flex-start;}
-      .nav li{margin-bottom:10vh;}
-      .nav li:last-child{margin-bottom:0;}
-      .nav a{font-size:28px;}
-
-      .mail_git{width:100%;margin-bottom:8vh;}
-      .mail_git ul{display:flex;justify-content:space-around;}
-      .mail_git a{font-size:48px;}
-
-      .footer{position:fixed;left:0;z-index:9999;background-color:#292826;}
-      .footer .container{padding:30px;}
-      .footer p{color:#f9d142;line-height:20px;}
-
-      .home .selfie{width:32.39130434782609%;max-width:500px;margin-bottom:4vh;}
-      .home h2{font-size:48px;}
-      .home h3{font-size:44px;}
-      .home h4{margin:2vh auto;font-size:32px;}
-
-      .intro .container{flex-direction:column;}
-      .intro .container>article{width:100%;}
-      .container>article:first-child,.profile{flex-flow:row wrap;justify-content:space-between;align-items:flex-start;}
-      .intro_content{margin-bottom:64px;}
-      .chk_btns{width:50%;align-self:center;}
-      .chk_btns a{font-size:22px;}
-      .profile>li{margin:0;width:48%;}
-      .profile .li_tit{padding-left:12px;font-size:32px;line-height:38px;}
-      .skills,.licenses{margin:1rem 0 0 1rem;}
-      .skills p,.licenses p{font-size:20px;}
-
-      .container article.port_content{flex-flow:column nowrap;}
-      .port .sec_sub_tit{width:100%;margin:48px 0;}
-      .portfolio{padding-bottom:300px;position:relative;}
-      .portfolio::before{content:'이미지를 클릭해주세요';position:absolute;top:50%;bottom:0;left:0;right:0;background-color:#f9d142;text-align:center;padding:11.5%;font-size:42px;}
-      .portfolio>li{width:24%;position:static;}
-      .portfolio>li .port_info{opacity:0;top:46%;z-index:1;transition:none;}
-      .portfolio>li.active .port_info{opacity:1;}
-      .port_hover{display:flex;}
-      .portfolio>li.active .port_info{top:48%;}
-      .portfolio::after{content:'';border:20px solid transparent;border-bottom-color:#292826;position:absolute;top:57%;right:50%;transform:translateX(50%);animation: tri_mov 0.8s infinite ease-in-out;z-index:0;}      
-      .port_info{flex-wrap:wrap;padding:22px;bottom:0;}
-      .port_info>div,.port_info>ul{width:48%;}
-      .prev_box{order:1;height:100%;width:48%;}
-      .prev_box li{height:100%;}
-      .portfolio>li:last-child .prev_box{justify-content:space-evenly;}
-    }
-    @media(min-width:1440px){
-      .sec_sub_tit{width:46%;}
-    }
-
-    @keyframes tri_mov{
-      0%{top:57%;}
-      50%{top:55.7%;}
-      100%{top:57%;}
-    }
-    
-  </style>
 </head>
 <body>
-  <section class="skip">
+  <section class="skip mo_hide">
     <a href="#intro">자기소개 바로가기</a>
     <a href="#port">작업물 보러가기</a>
     <a href="#contact">연락처 바로가기</a>
   </section>
-
   <section class="wrap">
     <header class="header">
       <div class="container">
@@ -382,6 +165,9 @@
             </li>
           </ul>
         </article>
+        <div class="sec_scroll">
+          <a href="#port"></a>
+        </div>
       </div>
     </section>
     <section class="section port" id="port">
@@ -551,10 +337,45 @@
             </li>
           </ul>
         </article>
+        <div class="sec_scroll">
+          <a href="#contact"></a>
+        </div>
       </div>
     </section>
     <section class="section contact" id="contact">
-      컨택트
+      <div class="container">
+        <article class="contact_content">
+          <h2 class="h2 sec_tit">
+            <span>감사합니다 :)</span>
+          </h2>
+          <h3 class="h3 sec_sub_tit">
+            포트폴리오에 방문해주셔서 감사합니다.
+            <br><span>문의 사항</span>이 있으시다면 언제든지 편하게 연락해주세요!
+          </h3>
+          <div class="mail_add">
+            <a href="mailto:daaechoi18@gmail.com" title="클릭해서 메일 보내기">
+              <strong><i class="far fa-envelope"></i> daaechoi18@gmail.com</strong>
+            </a>
+          </div>
+        </article>
+        <article class="bonus mo_hide">
+          <div class="insta_box">
+            <p>귀여운 강아지 보러 가실래요?</p>
+            <a href="https://www.instagram.com/daae_x_dali/" title="인스타그램 보러가기"><i class="fab fa-instagram"></i> @daae_x_dali</a>
+          </div>
+          <article class="imgs">
+              <img src="./img/bonus_b.png" alt="내 일러스트">
+            <div class="img_cv">
+              <div class="books">
+                <img src="./img/bonus_books.png" alt="책 일러스트">
+              </div>
+              <div class="book_hover" title="이력서를 받아보세요">
+                <a href="./doc/cv-daae_choi.hwp" download><img src="./img/bonus_cv.png" alt="이력서 일러스트"></a>
+              </div>
+            </div>
+          </article>
+        </article>
+      </div>
     </section>
     <footer class="footer">
       <div class="container">
@@ -564,38 +385,6 @@
       </div>
     </footer>
   </section>
-
-  <script>
-    $('.bar span').each(function(){
-      let gauge = $(this); 
-      let per = $(this).parent().attr('per');
-      gauge.css({"width":per + "%"}); 
-    })
-    $('.portfolio>li').on('click',function(){
-      $('.portfolio>li').removeClass('active');
-      $(this).addClass('active');
-    })
-    $(window).scroll(function(){
-      let introT = $('#intro').offset().top;
-      let portT = $('#port').offset().top;
-      let contT = $('#contact').offset().top;
-      let scT = $(window).scrollTop();
-      if(scT < portT && scT >= introT){
-        removH();
-        $('.nav li:nth-child(1) a').addClass('scroll');
-      }else if(scT >= portT && scT < contT){
-        removH();
-        $('.nav li:nth-child(2) a').addClass('scroll');
-      }else if(scT >= contT){
-        removH();
-        $('.nav li:nth-child(1) a').addClass('scroll');
-      }else if(scT < introT){
-        removH();
-      }
-    })
-    function removH(){
-      $('.nav li a').removeClass('scroll');
-    }  
-  </script>
+  <script src="./js/index.min.js"></script>
 </body>
 </html>
