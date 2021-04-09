@@ -26,7 +26,7 @@
 .nav a:hover::after,.nav a.scroll::after{opacity:1;}
 
 /* home */
-.home{height:100vh;position:relative;overflow:hidden;background:url(../img/bg_star.gif) center no-repeat #000;background-size:cover;}
+.home{height:100vh;position:relative;overflow:hidden;background:url(../img/bg_nasa.jpg) center no-repeat #000;background-size:3000px;background-attachment:fixed}
 .home .container{padding:0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .home .selfie{width:48.17073170731707%;max-width:297px;margin:0 auto 1rem;border-radius:50%;overflow:hidden;}
 .home h2,.home h3,.home h4{text-align:center;color:#f9d142}
@@ -180,7 +180,7 @@
   .footer p{font-size:14px;}
 }
 @media(min-width:1200px){
-  .section{width:calc(100% - 260px);margin-left:auto;}
+  .section{width:calc(100% - 260px);margin-left:260px;}
   .sec_tit{font-size:42px;}
   .sec_tit span{font-size:38px;}
   .sec_sub_tit,.sec_sub_tit span,.sec_txt{margin:0;}
@@ -210,6 +210,7 @@
   .footer .container{padding:30px;}
   .footer p{color:#f9d142;line-height:20px;}
 
+  .home{background-position-x:33%;background-size:2000px;}
   .home .selfie{width:32.39130434782609%;max-width:500px;margin-bottom:4vh;}
   .home h2{font-size:48px;}
   .home h3{font-size:44px;}
@@ -248,6 +249,7 @@
 }
 @media(min-width:1440px){
   .sec_sub_tit{width:50%;}
+  .home{background-position-x:33%;background-size:3000px;}
 }
 @keyframes tri_mov{
   0%{top:57%;}
