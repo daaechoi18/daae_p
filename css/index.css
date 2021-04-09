@@ -4,6 +4,7 @@
 .skip>a:focus{top:50%;transform:translate(-50%,-50%);}
 
 /* default */
+.section{background-color:#fff;}
 .container{width:100%;padding:84px 1rem 44px;max-width: 1160px;margin: 0 auto;display:flex;flex-direction:column;align-items:center;}
 .sec_tit,.sec_tit span{display:inline-block;}
 .sec_tit{font-size:26px;}
@@ -14,6 +15,9 @@
 .sec_txt{margin-bottom:24px;line-height:22px;}
 .sec_scroll{width:100%;margin-top:5rem;justify-self:center;align-self:center;}
 .sec_scroll a{width:2rem;height:2rem;margin:0 auto;border:2px solid #ddd;border-top:none;border-left:none;transform:rotate(45deg);}
+.hide_tit{width:0;height:0;overflow:hidden;}
+
+html::before{content:'';width:100vw;height:100vh;position:fixed;left:0;right:0;top:0;z-index:-10;background:url(../img/bg_nasa.jpg) center center no-repeat;background-size:cover;}
 
 /* header */
 .header{background-color:#f9d142;position:fixed;left:0;top:0;right:0;z-index:9999;}
@@ -26,7 +30,7 @@
 .nav a:hover::after,.nav a.scroll::after{opacity:1;}
 
 /* home */
-.home{height:100vh;position:relative;overflow:hidden;background:url(../img/bg_nasa.jpg) center no-repeat #000;background-size:3000px;background-attachment:fixed}
+.home{height:100vh;position:relative;overflow:hidden;background-color:transparent;}
 .home .container{padding:0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .home .selfie{width:48.17073170731707%;max-width:297px;margin:0 auto 1rem;border-radius:50%;overflow:hidden;}
 .home h2,.home h3,.home h4{text-align:center;color:#f9d142}
@@ -180,6 +184,7 @@
   .footer p{font-size:14px;}
 }
 @media(min-width:1200px){
+  html::before{left:140px;}
   .section{width:calc(100% - 260px);margin-left:260px;}
   .sec_tit{font-size:42px;}
   .sec_tit span{font-size:38px;}
@@ -210,7 +215,6 @@
   .footer .container{padding:30px;}
   .footer p{color:#f9d142;line-height:20px;}
 
-  .home{background-position-x:33%;background-size:2000px;}
   .home .selfie{width:32.39130434782609%;max-width:500px;margin-bottom:4vh;}
   .home h2{font-size:48px;}
   .home h3{font-size:44px;}
@@ -249,7 +253,6 @@
 }
 @media(min-width:1440px){
   .sec_sub_tit{width:50%;}
-  .home{background-position-x:33%;background-size:3000px;}
 }
 @keyframes tri_mov{
   0%{top:57%;}
